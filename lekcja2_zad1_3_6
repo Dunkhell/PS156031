@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a,b,c;
+    float d,e,f;
+
+    scanf("%f",&a);
+    scanf("%f",&b);
+    scanf("%f",&c);
+    scanf("%f",&d);
+    scanf("%f",&e);
+    scanf("%f",&f);
+
+    float w=(a*e)-(b*d);
+    float wx=(c*e)-(b*f);
+    float wy=(a*f)-(c*d);
+    float x=wx/w, y=wy/w;
+
+    if (w!=0)
+        printf("rozwiazanami tego ukladu jest x rowny %f oraz y rowny %f",x,y);
+    else if (w==0 & wx==0 & wy==0)
+        printf("ten uklad ma nieskocznenie wiele rozwiazan");
+    else if (w==0 & (wx==0||wy==0))
+        printf("ten uklad nie ma rozwiazan");
+        return 0;
+
+}
