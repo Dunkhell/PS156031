@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int n,m,k;
+   int i=0;
+   int xn=0;
+   do
+   {
+       printf("Wprowadz liczby: \n");
+       scanf("%i",&n);
+       scanf("%i",&m);
+       scanf("%i",&k);
+   } while ( n<0 || m<0 || k<0);
+    printf("Wielokrotnisciami tej liczby sa: \n");
+   while(xn<k)
+   {
+      if ((n*i)>m)
+      {
+          printf("%i\n",n*i);
+      }
+      i+=1;
+      xn=n*i;
+   }
+   return 0;
+}
