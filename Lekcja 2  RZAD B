@@ -1,3 +1,4 @@
+/1_3_4
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,7 +15,7 @@ int main()
     else
         printf("liczby maja taka sama wartosc bezwgledna");
 }
-
+/1_3_6
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,7 +44,7 @@ int main()
         printf("ten uklad nie ma rozwiazan");
 
 }
-
+/1_3_8
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -77,7 +78,7 @@ int main()
         printf("Pole tego kwadratu wynosi %f",polek);
     }
 }
-
+/1_4_1
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -115,7 +116,7 @@ int main()
        }while(xa<b);
    }
 }
-
+/1_4_3
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -142,7 +143,7 @@ int main()
       xn=n*i;
    }
 }
-
+/1_4_5
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -159,7 +160,7 @@ int main()
     }
     printf("%i",wynik);
 }
-
+/1_4_7
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -178,6 +179,7 @@ int main()
     }
     printf("%i",wynik);
 }
+/1_4_9
 #include <stdio.h>
 #include <stdlib.h>
 
