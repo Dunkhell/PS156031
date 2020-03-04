@@ -4,23 +4,6 @@
 int main()
 {
     int a,b;
-
-    scanf("%i",&a);
-    scanf("%i",&b);
-    if (a > b)
-    printf("wieksza liczba jest %i",a);
-    if (b >a)
-    printf("wieksza liczba jest %i",b);
-    else
-    printf("liczby sa rowne %i %i",a,b);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-    int a,b;
     scanf("%i",&a);
     scanf("%i",&b);
 
@@ -194,4 +177,26 @@ int main()
         wynik=wynik*i;
     }
     printf("%i",wynik);
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int a,b;
+   int r;
+   do
+   {
+       scanf("%i",&a);
+       scanf("%i",&b);
+   }while (a < 0 || b < 0);
+   do
+    {
+        if(a > b) {
+           a = a - b;
+        } else {
+            b = b - a;
+        }
+    }while(a != b);
+    printf("NWD to %i", a);
 }
