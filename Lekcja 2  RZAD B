@@ -1,0 +1,197 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b;
+
+    scanf("%i",&a);
+    scanf("%i",&b);
+    if (a > b)
+    printf("wieksza liczba jest %i",a);
+    if (b >a)
+    printf("wieksza liczba jest %i",b);
+    else
+    printf("liczby sa rowne %i %i",a,b);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b;
+    scanf("%i",&a);
+    scanf("%i",&b);
+
+    if (abs(a) > abs(b))
+        printf("wieksza wartosc bezwzgledna ma liczba %i",a);
+    if (abs(b) > abs(a))
+        printf("wieksza wartosc bezwzgledna ma liczba %i",b);
+    else
+        printf("liczby maja taka sama wartosc bezwgledna");
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a,b,c;
+    float d,e,f;
+
+    scanf("%f",&a);
+    scanf("%f",&b);
+    scanf("%f",&c);
+    scanf("%f",&d);
+    scanf("%f",&e);
+    scanf("%f",&f);
+
+    float w=(a*e)-(b*d);
+    float wx=(c*e)-(b*f);
+    float wy=(a*f)-(c*d);
+    float x=wx/w, y=wy/w;
+
+    if (w!=0)
+        printf("rozwiazanami tego ukladu jest x rowny %f oraz y rowny %f",x,y);
+    if (w==0 & wx==0 & wy==0)
+        printf("ten uklad ma nieskocznenie wiele rozwiazan");
+    if (w==0 & (wx==0||wy==0))
+        printf("ten uklad nie ma rozwiazan");
+
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a,b;
+    int figura;
+    printf("prosze wybrac figure:\n1=kwadrat\n2=prostokat\n3=trojkat\n");
+    scanf("%i",&figura);
+    if (figura==3)
+    {
+        printf("podaj wymiary trojkata (dlugosc podstawy, wysokosc)\n");
+        scanf("%f",&a);
+        scanf("%f",&b);
+        float polet=(a*b)/2;
+        printf("Pole tego trojkata wynosi %f",polet);
+    }
+    if (figura==2)
+    {
+        printf("podaj wymiary tego prostokata\n");
+        scanf("%f",&a);
+        scanf("%f",&b);
+        float polep=a*b;
+        printf("Pole tego prostokata wynosi %f", polep);
+    }
+    if (figura==1)
+    {
+        printf("podaj wymiary tego kwadratu\n");
+        scanf("%f",&a);
+        float polek=powf(a,2);
+        printf("Pole tego kwadratu wynosi %f",polek);
+    }
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b;
+    int i=1;
+    int xb,xa;
+   do
+   {
+       printf("Liczby musza byc dodatnie: \n");
+       scanf("%i",&a);
+       scanf("%i",&b);
+   } while ( a<0 || b<0);
+   if (a>b)
+   {
+       printf("Wielokrotnosciami %i sa: \n",b);
+
+       do
+       {
+            xb=b*i;
+            printf("%i\n",b*i);
+            i=i+1;
+       }while(a>xb);
+   }
+   if (a<b)
+   {
+       printf("Wielokrotnosciami %i sa: \n",a);
+
+       do
+       {
+            xa=a*i;
+            printf("%i\n",a*i);
+            i=i+1;
+       }while(xa<b);
+   }
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int n,m,k;
+   int i=0;
+   int xn=0;
+   do
+   {
+       printf("Wprowadz liczby: \n");
+       scanf("%i",&n);
+       scanf("%i",&m);
+       scanf("%i",&k);
+   } while ( n<0 || m<0 || k<0);
+    printf("Wielokrotnisciami tej liczby sa: \n");
+   while(xn<k)
+   {
+      if ((n*i)>m)
+      {
+          printf("%i\n",n*i);
+      }
+      i+=1;
+      xn=n*i;
+   }
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,wynik=0;
+    do
+    {
+        scanf("%i",&a);
+    }while (a<0);
+    for (int i=0;i <= a; i+=1)
+    {
+        wynik=wynik+pow(i,2);
+    }
+    printf("%i",wynik);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n,m;
+    do
+    {
+        scanf("%i",&n);
+        scanf("%i",&m);
+    }while (n>m);
+    int wynik=n;
+    for (int i=n+1; i<=m; i+=1)
+    {
+        wynik=wynik*i;
+    }
+    printf("%i",wynik);
+}
