@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b;
+    scanf("%i",&a);
+    scanf("%i",&b);
+
+    if (abs(a) > abs(b))
+        printf("wieksza wartosc bezwzgledna ma liczba %i",a);
+    else if (abs(b) > abs(a))
+        printf("wieksza wartosc bezwzgledna ma liczba %i",b);
+    else
+        printf("liczby maja taka sama wartosc bezwgledna");
+    return 0;
+}
