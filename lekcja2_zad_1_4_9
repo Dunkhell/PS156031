@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int a,b;
+   int r;
+   do
+   {
+       scanf("%i",&a);
+       scanf("%i",&b);
+   }while (a < 0 || b < 0);
+   do
+    {
+        if(a > b) {
+           a = a - b;
+        } else {
+            b = b - a;
+        }
+    }while(a != b);
+    printf("NWD to %i", a);
+    retrun 0;
+}
