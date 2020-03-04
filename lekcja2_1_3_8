@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a,b;
+    int figura;
+    printf("prosze wybrac figure:\n1=kwadrat\n2=prostokat\n3=trojkat\n");
+    scanf("%i",&figura);
+    if (figura==3)
+    {
+        printf("podaj wymiary trojkata (dlugosc podstawy, wysokosc)\n");
+        scanf("%f",&a);
+        scanf("%f",&b);
+        float polet=(a*b)/2;
+        printf("Pole tego trojkata wynosi %f",polet);
+    }
+    if (figura==2)
+    {
+        printf("podaj wymiary tego prostokata\n");
+        scanf("%f",&a);
+        scanf("%f",&b);
+        float polep=a*b;
+        printf("Pole tego prostokata wynosi %f", polep);
+    }
+    if (figura==1)
+    {
+        printf("podaj wymiary tego kwadratu\n");
+        scanf("%f",&a);
+        float polek=powf(a,2);
+        printf("Pole tego kwadratu wynosi %f",polek);
+    }
+    return 0;
+}
