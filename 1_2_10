@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x;
+    scanf("%f",&x);
+
+    printf("Wartosc bezwzgledna z %f to %f\n", x, fabs(x) );
+    return 0;
+}
