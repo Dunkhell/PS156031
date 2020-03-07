@@ -1,0 +1,5 @@
+int main()
+{
+    printf("bardzo\ndlugi\nnapis");
+    return 0;
+}
