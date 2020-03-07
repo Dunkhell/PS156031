@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    float x;
+    do
+    {
+        printf("Liczba musi byc nieujemna\n");
+        scanf("%f",&x);
+    }
+    while(x<0);
+    printf("Pierwiastek %f wynosi %f",x, sqrt(x));
+    return 0;
+}
