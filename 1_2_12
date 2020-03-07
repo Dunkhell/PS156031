@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main()
+{
+    float liczba;
+    scanf("%f",&liczba);
+    printf("%e\n",liczba);
+    return 0;
+}
