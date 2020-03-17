@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+void liczenie()
+{
+    static unsigned int x=0;
+    x+=1;
+    printf("Funkcja zostala wywolana %d razy\n", x);
+}
+int main()
+{
+    liczenie();
+    liczenie();
+    liczenie();
+    int x=5;
+    liczenie();
+    return 0;
+}
