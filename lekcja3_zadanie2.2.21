@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+int ciag (int n)
+{
+    if(n==0)
+        return 0;
+    return 2*ciag(n-1)+5;
+}
+int main()
+{
+    int a;
+    scanf("%i",&a);
+    printf("%i wyrazem jest %i",a,ciag(a));
+    return 0;
+}
