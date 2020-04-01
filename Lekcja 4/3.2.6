@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+void foo (int n, int *w)
+{
+    *w =n;
+}
+int main()
+{
+    int a;
+    scanf("%i",&a);
+    printf("Liczba a wynosi %i\n",a);
+    foo(23,&a);
+    printf("liczba a wynosi teraz %i",a);
+    return 0;
+}
