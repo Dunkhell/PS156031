@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+void foo (const int*a, int *b)
+{
+    *b=*a;
+}
+int main()
+{
+    int x=5,y=10,z=3;
+    foo(&x,&y);
+    printf("%i\n",y);
+    foo(&z,&y);
+    printf("%i\n",y);
+    return 0;
+}
