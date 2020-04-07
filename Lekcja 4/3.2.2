@@ -1,19 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-int foo(int *a, int *b)
+int* foo(int *a, int *b)
 {
-    int *x;
-    if (*a > *b)
-        *x=*b;
+    if(*a<*b)
+        return a;
     else
-        *x=*a;
-    return *x;
+        return b;
 }
 int main()
 {
-    int *a,*b;
-    scanf("%i",&a);
-    scanf("%i",&b);
-    printf("Mniejsza liczba jest %i",foo(&a,&b));
+    int x=10,y=5,z;
+    z= foo(&x,&y);
+    printf("%d",&z);
     return 0;
 }
