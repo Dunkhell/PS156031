@@ -11,7 +11,7 @@ int foo(int *a, int *b)
 }
 int main()
 {
-    int a,b;
+    int *a,*b;
     scanf("%i",&a);
     scanf("%i",&b);
     printf("Mniejsza liczba jest %i",foo(&a,&b));
