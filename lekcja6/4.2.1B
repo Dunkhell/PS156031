@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+void foo (unsigned int n, int *tab)
+{
+    for (int i=0; i < n; i++)
+    {
+        tab[i]=i;
+    }
+}
+
+int main()
+{
+    int tab[]= {1,2,3,4};
+        for (int i=0; i<4;i++)
+        {
+            printf("%i \n",tab[i]);
+        }
+    foo(4,tab);
+        for (int i=0; i<4;i++)
+        {
+            printf("%i \n",tab[i]);
+        }
+    return 0;
+}
