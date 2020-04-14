@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+void przypisz (int *tab1, int *tab2)
+{
+    for (int i=0;i<5;i++)
+    {
+        tab2[i]=tab1[i];
+    }
+
+}
+void foo (unsigned int n,int *tab1, int *tab2, int *tab3)
+{
+    int tab1k[n],tab2k[n], tab3k[n];
+    przypisz(tab1,tab1k);
+    przypisz(tab2,tab2k);
+    przypisz(tab3,tab3k);
+    int ma,mi,sr;
+    for (int i=0 ;i < n; i++)
+    {
+        mi= tab1[i];
+        ma=tab1[i];
+        if (tab2[i] > ma)
+        {
+            ma= tab2[i];
+        }
+        if (tab3[i] > ma)
+        {
+            ma=tab3[i];
+        }
+        tab1[i]=ma;
+        if (tab2[i] < mi)
+        {
+            mi=tab2[i];
+        }
+        if (tab3[i] < mi)
+        {
+            mi=tab3[i];
+        }
+        tab3[i]=mi;
+        if ( mi!=tab1k[i])
+            {
+                if (ma!=tab1k[i])
+                {
+                    sr=tab1k[i];
+                }
+            }
+        if ( mi != tab2k[i])
+        {
+            if (ma!=tab2k[i])
+            {
+                sr=tab2k[i];
+            }
+        }
+        if ( mi != tab3k[i])
+        {
+            if ( ma!= tab3k[i])
+            {
+                sr=tab3k[i];
+            }
+        }
+        tab2[i]=sr;
+
+    }
+}
+
+int main()
+{
+    int tab1[]= {1,10,1};
+    int tab2[]= {10,1,2};
+    int tab3[]= {4,6,10};
+    foo(3,tab1,tab2,tab3);
+    printf("Tablica 1:\n");
+    for (int i=0;i<3;i++)
+    {
+        printf("%i\n", tab1[i]);
+    }
+    printf("Tablica 2:\n");
+        for (int i=0;i<3;i++)
+    {
+        printf("%i\n", tab2[i]);
+    }
+    printf("Tablica 3:\n");
+        for (int i=0;i<3;i++)
+    {
+        printf("%i\n", tab3[i]);
+    }
+    return 0;
+}
