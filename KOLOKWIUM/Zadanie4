@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+float* zarezerwuj()
+{
+    float *a= malloc(sizeof(float));
+    float *b= malloc(sizeof(float));
+    float *c= malloc(sizeof(float));
+    *a=-1.4;
+    *b=2.7;
+    *c=3.2;
+    return c;
+}
+int main()
+{
+   printf("wartosc: %f\n",*zarezerwuj());
+    printf("adres:%p\n",&*zarezerwuj());
+    return 0;
+}
