@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int tab[]={1,0,5,2,-1},c,w;
+    tab[2]=3;
+    *(tab+2)=c=w;
+    *(tab+3)=tab==3;
+    *(tab+3)=3;
+    return 0;
+}
