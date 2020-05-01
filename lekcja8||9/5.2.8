@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+void foo (char *napis)
+{
+    int i;
+    for (i=0; napis[i]!=0;i++)\
+    {
+        if (napis[i]>= 'A' && napis[i]<= 'Z')
+            {
+                napis[i]=napis[i]+32;
+            }
+    }
+}
+int main()
+{
+    char napis[]="XDDD";
+    foo(napis);
+    printf("%s\n",napis);
+    return 0;
+}
