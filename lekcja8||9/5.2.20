@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+char *godzina (int godz, int min, int sek)
+{
+    char* godzina=malloc(9*sizeof(char));
+    sprintf(godzina,"%02d:%02d:%02d",godz,min,sek);
+    return godzina;
+
+}
+wchar_t*godzina2 (int godz, int min, int sek)
+{
+    wchar_t*godzina=malloc(9*sizeof(char));
+    sprintf(godzina,"%02d:%02d:%02d",godz,min,sek);
+    return godzina;
+}
+int main()
+{
+    printf("%s\n",godzina(11,30,12));
+    printf("%s\n",godzina2(23,56,23));
+    return 0;
+}
