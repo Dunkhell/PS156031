@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+void wyczysc (char *napis)
+{
+    napis[0]= NULL;
+}
+void wyczysc2 (wchar_t *napis)
+{
+    napis[0]= NULL;
+}
+
+int main()
+{
+    char napis[]= "xddd";
+    wyczysc(napis);
+    printf("%s test\n",napis);
+    wchar_t napis2[]= L"xddd";
+    wyczysc2(napis);
+    wprintf(L"%s test2\n",napis);
+    return 0;
+}
