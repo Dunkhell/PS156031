@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int zawiera(char znak, char* napis)
+{
+    int i;
+    for (i=0;napis[i]!=0;i++)
+        if (napis[i]==znak)
+            return 1;
+
+    return 0;
+}
+
+void wytnijzw (char* napis, char* napis2)
+{
+    int i,j=0;
+    for (i=0; napis[i]!=0;i++)
+        if(zawiera(napis[i],napis2)==0)
+        {
+            if (j<i)
+                napis[j]=napis[i];
+            j++;
+        }
+    napis[j]=0;
+}
+int main()
+{
+    char napis[]= "abcdee";
+    char napis2[]= "abcsx";
+    wytnijzw(napis,napis2);
+    printf("%s",napis);
+    return 0;
+}
