@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+void foo (char*napis, char*napis2)
+{
+    int i;
+    for (int i=0; napis[i]!=0;i++)
+    {
+        napis2[i]=napis[i];
+    }
+}
+void foo2 (wchar_t*napis, wchar_t *napis2)
+{
+    int i;
+    for (i=0; napis[i]!=0;i++)
+    {
+        napis2[i]=napis[i];
+    }
+}
+int main()
+{
+    char napis[]="abc";
+    char napis2[5];
+    foo(napis,napis2);
+    printf("%s \n",napis2);
+    wchar_t napis3[]=L"aaaacd";
+    wchar_t napis4[]=L"xDDDDD";
+    foo2(napis3,napis4);
+    wprintf(L"%s \n",napis4);
+    return 0;
+}
