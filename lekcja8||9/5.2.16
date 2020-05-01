@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+void wczytaj (char *napis)
+{
+    scanf("%s",napis);
+}
+void wczytajt (wchar_t *napis)
+{
+    wscanf("%s",napis);
+}
+int main()
+{
+    char napis[5];
+    wczytaj(napis);
+    printf("%s",napis);
+    return 0;
+}
