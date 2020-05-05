@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-int zawiera(char znak, char* napis)
+void wytnij (char*napis,char*napis2)
+{
+    int i,j;
+    int wyst[256]={};
+    for (i=0;napis2[i]!=0;i++)
+        wyst[napis2[i]]=1;
+    for (i=0,j=0;napis[i]!=0;i++)
+        if (wyst[napis[i]]==0)
+        {
+            if (j<i)
+                napis[j]=napis[i];
+            j++;
+        }
+    napis[j]=0;
+}
+int zawiera(wchar_t znak, wchar_t* napis)
 {
     int i;
     for (i=0;napis[i]!=0;i++)
@@ -10,7 +25,7 @@ int zawiera(char znak, char* napis)
     return 0;
 }
 
-void wytnijzw (char* napis, char* napis2)
+void wytnijzw (wchar_t* napis, wchar_t* napis2)
 {
     int i,j=0;
     for (i=0; napis[i]!=0;i++)
@@ -24,9 +39,14 @@ void wytnijzw (char* napis, char* napis2)
 }
 int main()
 {
-    char napis[]= "abcdee";
-    char napis2[]= "abcsx";
+    char napis3[]="abcdee";
+    char napis4[]="abcsx";
+    wytnij(napis3,napis4);
+    printf("test1: %s\n",napis3);
+
+    wchar_t napis[]= L"abcdee";
+    wchar_t napis2[]= L"abcsx";
     wytnijzw(napis,napis2);
-    printf("%s",napis);
+    wprintf(L"test2: %s",napis);
     return 0;
 }
