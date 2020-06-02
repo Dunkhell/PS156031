@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct trojkat
+{
+    float a;
+    float b;
+    float c;
+};
+float obwod (struct trojkat x)
+{
+    float suma = x.a + x.b + x.c;
+    return suma;
+}
+int main()
+{
+    struct trojkat trj1;
+    trj1.a=5.4;
+    trj1.b=3;
+    trj1.c=4;
+    printf("%f",obwod(trj1));
+    return 0;
+}
