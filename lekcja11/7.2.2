@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct trojkat
+{
+    float a;
+    float b;
+    float c;
+};
+void zamien (struct trojkat trojkat1, struct trojkat *trojkat2)
+{
+    *trojkat2 = trojkat1;
+}
+int main()
+{
+    struct trojkat trojkat1= {3.4,3,4};
+    struct trojkat trojkat2= {14,15,16};
+    printf("%f %f %f\n",trojkat2.a,trojkat2.b,trojkat2.c);
+    zamien(trojkat1,&trojkat2);
+    printf("%f %f %f",trojkat2.a,trojkat2.b,trojkat2.c);
+    return 0;
+}
