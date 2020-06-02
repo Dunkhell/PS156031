@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+enum czworokat
+{
+    kwadrat,romb,trapez,rownoleglobok
+};
+int main()
+{
+    enum czworokat figura = trapez;
+    switch (figura)
+    {
+        case romb:
+            printf("twoj czworokat to romb!");
+            break;
+        case kwadrat:
+            printf("twoj czworokat to kwadrat!");
+            break;
+        case trapez:
+            printf("twoj czworokat to trapez!");
+            break;
+        case rownoleglobok:
+            printf("twoj czworokat to rownoleglobok!");
+            break;
+    }
+    return 0;
+}
