@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void foo (char *napis, char napis2[])
+{
+    int i=0,j=0,h=0;
+
+    for (i;napis[i]!='\0';i++);
+    for (j;napis2[j]!='\0';j++);
+    j--;
+    i--;
+    int dl=j;
+    for (h=i+1;h<=j+i+1;h++)
+    {
+        napis[h]=malloc(sizeof(char));
+        napis[h]=napis2[dl];
+        dl--;
+    }
+    napis[h]='\0';
+    printf("%s\n",napis);
+}
+
+int main()
+{
+    char napis1[]="JDDIS";
+    char napis[]="XDDDD";
+    foo(&napis1,napis);
+    return 0;
+}
