@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct punkt
+{
+    float x;
+    float y;
+    float z;
+};
+void zamien (struct punkt tab1 [], struct punkt *tab2 ,int n)
+{
+    for (int i=0;i<n;i++)
+    {
+        tab2[i].x = tab1[i].x;
+        tab2[i].y = tab1[i].y;
+        tab2[i].z = tab1[i].z;
+    }
+}
+int main()
+{
+    struct punkt punkt1 = {.x=2,.y=17,.z=31};
+    struct punkt punkt2 = {.x=11,.y=2,.z=5};
+    struct punkt punkt3 = {.x=5,.y=7,.z=6};
+    struct punkt punkt4 = {.x=4,.y=5,.z=9};
+    struct punkt tablicaPunktow1[2]={punkt1, punkt2};
+    struct punkt tablicaPunktow2[2]={punkt3, punkt4};
+    for (int i=0;i<2;i++)
+    {
+        printf("miejsce: %i %f %f %f \n",i,tablicaPunktow2[i].x,tablicaPunktow2[i].y,tablicaPunktow2[i].z);
+    }
+    zamien(tablicaPunktow1,&tablicaPunktow2,2);
+    for (int i=0;i<2;i++)
+    {
+        printf("Zamieniona tablica miejsce: %i %f %f %f \n",i,tablicaPunktow2[i].x,tablicaPunktow2[i].y,tablicaPunktow2[i].z);
+    }
+    return 0;
+}
