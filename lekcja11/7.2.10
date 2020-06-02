@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+union super_int
+{
+    int x;
+    unsigned int z;
+};
+int main()
+{
+    union super_int liczba;
+    liczba.x=-10;
+    printf("%i\n",liczba.x);
+    liczba.z=23;
+    printf("%u",liczba.z);
+    return 0;
+}
