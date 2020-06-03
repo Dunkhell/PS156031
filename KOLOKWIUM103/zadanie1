@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int foo(int a)
+{
+    return a+3;
+}
+
+int main()
+{
+    int tab[4][4] = {{1,0,3,-2},{7,1,0,3},{-8,4,1,2}, {-9,-8,-2,-3}};
+    int a = sizeof(int*); //a=4
+    int * p = tab+1; //p=0x60fec4 , *p =7
+    int r = *(*(tab+2)-1); // r=3 , &r=0x60feef4
+    *p=foo(*p); //p=0x60fef4 , **p =CANNOT ACCESS MEMORY AT ADRESS 0xa
+    r= *(*(tab+1)+4); // r=-8 , &r=0x60fef4
+    return 0;
+}
