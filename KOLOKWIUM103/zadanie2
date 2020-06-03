@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int dlugosc (char *napis)
+{
+    int i,dlugosc=0,maliczbe;
+    for (i=0;napis[i]!='\0';i++)
+    {
+        if (isdigit(napis[i])==0)
+        {
+            dlugosc++;
+        }
+    }
+    return dlugosc;
+
+}
+int main()
+{
+    char test1[]= "jdET";
+    char test2[]= "abc3334";
+    char test3[]= "12";
+    printf("test1: %i\n",dlugosc(test1));
+    printf("test2: %i\n",dlugosc(test2));
+    printf("test3: %i",dlugosc(test3));
+    return 0;
+}
