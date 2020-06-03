@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+union Test
+{
+    char *a;
+    double b;
+};
+int main()
+{
+    union Test tablica[6];
+    tablica[0].b=50;
+    tablica[1].b=23;
+    tablica[2].b=1;
+    tablica[3].b=45;
+    tablica[4].a="kolno";
+    tablica[5].a="xdd";
+    for (int i=0; i<4;i++)
+    {
+        printf("%f \n",tablica[i].b);
+    }
+    for (int i=4; i<6;i++)
+    {
+            puts(tablica[i].a);
+    }
+    return 0;
+}
