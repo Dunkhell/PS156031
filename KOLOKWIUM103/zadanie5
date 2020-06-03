@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+struct element
+{
+    int x;
+    struct element * next;
+};
+double suma (struct element * element1)
+{
+    element1=element1->next;
+    double suma=0;
+    while(element1!=NULL)
+    {
+        suma = suma + element1->x*element1->x*element1->x;
+        element1=element1->next;
+    }
+    return suma;
+}
+int wynik (double a, double b)
+{
+    if(abs(a-b)==0)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int main()
+{
+    struct element * elem1 = malloc(sizeof(struct element));
+    elem1->x=1;
+    elem1->next=NULL;
+    struct element * elem2 = malloc(sizeof(struct element));
+    elem2->x=2;
+    elem2->next=NULL;
+    elem1->next=elem2;
+    struct element * elem3 = malloc(sizeof(struct element));
+    elem3->x=4;
+    elem3->next=NULL;
+    elem2->next=elem3;
+    struct element * elem4 = malloc(sizeof(struct element));
+    elem4->x=1;
+    elem4->next=NULL;
+    elem3->next=elem4;
+    printf("%d",wynik(suma(elem1),suma(elem2)));
+    return 0;
+}
