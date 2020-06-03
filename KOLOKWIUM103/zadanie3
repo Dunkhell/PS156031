@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int * foo (int **tab,int n,int m)
+{
+    int ostatnia= tab[n-1][m-1];
+    int *wsk=malloc(sizeof(int*));
+    *wsk=ostatnia;
+    return wsk;
+}
+int main()
+{
+     int tab[2][2]={
+    {2,3},
+    {4,5}
+    };
+    int *wynik;
+    *wynik=foo(tab,2,2);
+    printf("%f",*wynik);
+    return 0;
+}
